@@ -1,0 +1,319 @@
+
+/* typography */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Charmonman&display=swap');
+
+@font-face {
+    font-family: 'hominisnormal';
+    src: url('HOMINIS-webfont.eot');
+    src: url('HOMINIS-webfont.eot?#iefix') format('embedded-opentype'),
+         url('HOMINIS-webfont.woff2') format('woff2'),
+         url('HOMINIS-webfont.woff') format('woff'),
+         url('HOMINIS-webfont.ttf') format('truetype'),
+         url('HOMINIS-webfont.svg#hominisnormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+	color: #333333;
+	font-family: "Hominis", Arial;
+	font-size: 50px;
+	font-style: italic;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+h2{
+	color: #ef6065;
+	font-family: 'Charmonman', cursive;
+	font-size: 50px;
+	font-style: italic;
+	letter-spacing: normal;
+}
+
+
+
+
+/* layout */
+
+body{
+	background-image: url(images/homebg-01.png);
+	padding: 0;
+	margin: 0;
+	height: 960px;
+	width: 1280px;
+}
+
+header{
+	height: 135px;
+	width: 940px;
+	margin: auto;
+	position: relative;
+
+}
+
+/* basic menu styles */
+.block-menu {
+	display: block;
+	background: #2d348b;
+	position: relative;
+	top: 20px;
+}
+
+.block-menu li {
+	display: inline-block;
+}
+
+.block-menu li a {
+	color: #2d348b;
+	display: block;
+	text-decoration: none;
+	font-family: 'Passion One', Arial, sans-serif;
+	font-smoothing: antialiased;
+	text-transform: uppercase;
+	overflow: visible;
+	line-height: 20px;
+	font-size: 24px;
+	padding: 15px 10px;
+}
+
+/* animation domination */
+.three-d {
+	perspective: 200px;
+	transition: all .07s linear;
+	position: relative;
+	cursor: pointer;
+}
+	/* complete the animation! */
+	.three-d:hover .three-d-box, 
+	.three-d:focus .three-d-box {
+		transform: translateZ(-25px) rotateX(90deg);
+	}
+
+.three-d-box {
+	transition: all .3s ease-out;
+	transform: translatez(-25px);
+	transform-style: preserve-3d;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/***************************** SVG animation *****************************/
+
+.front {
+	transform: rotatex(0deg) translatez(25px);
+}
+
+.back {
+	transform: rotatex(-90deg) translatez(25px);
+	color: #ffe7c4;
+}
+
+.front, .back {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #2d348b;
+	padding: 15px 10px;
+	color: white;
+	pointer-events: none;
+	box-sizing: border-box;
+}
+
+
+nav{
+	float: right;
+	margin-top: 35px;
+}
+	nav ul{
+		list-style-type: none;
+	}
+
+	nav li{
+		display: inline-block;
+		margin-left: 50px;
+
+	}
+
+	nav a:link{
+		color: white;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 18px;
+		text-decoration: none;
+	}
+
+section{
+	box-shadow: 10px 10px 30px #02160a;
+	background-image: url(images/homesection-02.png);
+	width:940px;
+	height: 535px;
+	margin: auto;
+	margin-top: 80px;
+	position: relative;
+	
+}
+
+article{
+	float: left;
+	width: 650px;
+	height: 100px;
+	position: relative;
+	top: 150px;
+	left: -20px;
+}
+
+.name {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Hominis", Arial;
+}
+
+article h1 {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  align-content: center;
+	  text-align: center;
+	  font-weight: normal;
+	  letter-spacing: normal;
+	  line-height: 1.25em;
+	  width: 100%;
+	  text-align: center;
+	  font-size: 70px;
+	  background: linear-gradient(-45deg, #2d348b 25%, #feac5e 25%, #feac5e 50%, #2d348b 50%, #2d348b 75%, #feac5e 75%, #feac5e);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  background-size: 90px 90px;
+	  background-position: 0 0;
+	  -webkit-animation: stripes 1s linear infinite;
+	          animation: stripes 1s linear infinite;
+}
+
+@-webkit-keyframes stripes {
+  100% {
+    background-position: 90px 0, 90px 0, 90px 0;
+  }
+}
+
+@keyframes stripes {
+  100% {
+    background-position: 90px 0, 90px 0, 90px 0;
+  }
+}
+
+article h2:{
+	display: inline-block;
+	position: relative;
+    bottom: 254px;
+    left: 50px;
+}
+
+aside{
+	float: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+  display: flex;
+  padding: 0px 25px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  color: white;
+  background: #2d348b;
+  transition: 1s;
+  box-shadow: 6px 6px 2px black;
+  transform: skewX(-15deg);
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 2px #efe84b;
+}
+
+.cta span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+span {
+  transform: skewX(15deg);
+}
+
+span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+/**************SVG****************/
+
+path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+  0% {
+    fill: #df5b46;
+  }
+  50% {
+    fill: #f8dae9;
+  }
+  100% {
+    fill: white;
+  }
+}
+
+
